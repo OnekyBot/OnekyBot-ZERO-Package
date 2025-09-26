@@ -14,7 +14,7 @@ compiler.warning_flags.all=-Wall -Wextra -DDEBUG_LEVEL=DEBUG_ALL
 
 # compiler variables
 # ----------------------
-compiler.path={runtime.tools.xpack-arm-none-eabi-gcc-10.3.1-2.3.path}/bin/
+compiler.path={runtime.tools.xpack-arm-none-eabi-gcc-14.2.1-1.1.path}/bin/
 compiler.c.cmd=arm-none-eabi-gcc
 compiler.c.flags=-c -g {build.flags.optimize} {compiler.warning_flags} -std=gnu11 -MMD -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -DBOARD_{build.variant} -D{build.vect} -DERROR_LED_PORT={build.error_led_port} -DERROR_LED_PIN={build.error_led_pin} 
 compiler.c.elf.cmd=arm-none-eabi-g++
@@ -112,7 +112,7 @@ recipe.output.save_file={build.project_name}.{build.variant}.bin
 # Upload using Maple bootloader over DFU
 tools.maple_upload.cmd=maple_upload
 tools.maple_upload.cmd.windows=maple_upload.bat
-tools.maple_upload.path={runtime.hardware.path}/tools/win
+tools.maple_upload.path={runtime.tools.STM32Tools.path}
 tools.maple_upload.path.macosx={runtime.hardware.path}/tools/macosx
 tools.maple_upload.path.linux={runtime.hardware.path}/tools/linux
 tools.maple_upload.path.linux64={runtime.hardware.path}/tools/linux64    
