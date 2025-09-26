@@ -8,6 +8,7 @@ void setup() {
 }
 
 void loop() {
+  oled.clear();
   oled.println("Hello World");
   delay(500);
 }

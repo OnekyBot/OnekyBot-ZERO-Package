@@ -1,7 +1,6 @@
 #ifndef ONEKYBOT_ZERO
 #define ONEKYBOT_ZERO
 
-#include<Servo.h>
 #include<Wire.h>
 #include <SSD1306Ascii.h>
 #include <SSD1306AsciiWire.h>
